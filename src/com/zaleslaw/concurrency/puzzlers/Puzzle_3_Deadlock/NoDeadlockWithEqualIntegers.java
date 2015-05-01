@@ -1,7 +1,7 @@
 package com.zaleslaw.concurrency.puzzlers.Puzzle_3_Deadlock;
 
 /**
- * http://www.javatpoint.com/deadlock-in-java
+ * Two Integer with values less than 100 has one cached value
  */
 public class NoDeadlockWithEqualIntegers {
 

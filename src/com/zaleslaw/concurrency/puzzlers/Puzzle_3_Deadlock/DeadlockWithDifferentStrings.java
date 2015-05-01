@@ -1,7 +1,7 @@
 package com.zaleslaw.concurrency.puzzlers.Puzzle_3_Deadlock;
 
 /**
- * Synchronization depends on caching of intern value in Integer type
+ * Synchronization depends on caching of intern value in String type
  */
 public class DeadlockWithDifferentStrings {
 
