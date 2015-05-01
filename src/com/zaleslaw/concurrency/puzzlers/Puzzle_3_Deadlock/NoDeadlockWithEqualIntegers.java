@@ -1,13 +1,13 @@
-package com.zaleslaw.concurrency.puzzlers.Puzzle_3;
+package com.zaleslaw.concurrency.puzzlers.Puzzle_3_Deadlock;
 
 /**
- * Synchronization depends on caching of intern value in Integer type
+ * http://www.javatpoint.com/deadlock-in-java
  */
-public class DeadlockWithEqualIntegersMoreThan100 {
+public class NoDeadlockWithEqualIntegers {
 
     public static void main(String[] args) {
-        Integer counter1 = 1000;
-        Integer counter2 = 1000;
+        Integer counter1 = 0;
+        Integer counter2 = 0;
 
         Thread t1 = new Thread(new Runnable() {
             @Override

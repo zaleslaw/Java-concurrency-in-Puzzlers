@@ -1,4 +1,4 @@
-package com.zaleslaw.concurrency.puzzlers.Puzzle_3;
+package com.zaleslaw.concurrency.puzzlers.Puzzle_3_Deadlock;
 
 /**
  * Synchronization depends on caching of intern value in Integer type

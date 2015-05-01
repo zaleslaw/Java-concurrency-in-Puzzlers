@@ -1,4 +1,4 @@
-package com.zaleslaw.concurrency.puzzlers.Puzzle_1;
+package com.zaleslaw.concurrency.puzzlers.Puzzle_1_Simple;
 
 /**
  * It prints "I'm main thread" before "I'm alive", but "I'm joined main thread" after calling join() method

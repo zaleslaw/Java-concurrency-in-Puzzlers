@@ -1,16 +1,16 @@
-package com.zaleslaw.concurrency.puzzlers.Puzzle_1;
+package com.zaleslaw.concurrency.puzzlers.Puzzle_1_Simple;
 
 /**
- * It prints "I'm main thread" only in many cases
+ * It prints "I'm main thread" before "I'm alive"
  *
- * #2 will not be printed because all daemon thread will die after interrupting of main thread
+ * Before-happens doesn't exist between #1 and #2
  */
-public class SimpleDaemonThread {
+public class SimpleThread {
     public static void main(String[] args) throws InterruptedException {
         Thread t = new Thread(()-> System.out.println("I'm alive")); // #1
-        t.setDaemon(true);
         t.start();
         System.out.println("I'm main thread");                       // #2
+
         // Let's destroy main thread
         Thread.currentThread().interrupt();
     }

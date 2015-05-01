@@ -1,4 +1,4 @@
-package com.zaleslaw.concurrency.puzzlers.Puzzle_2;
+package com.zaleslaw.concurrency.puzzlers.Puzzle_2_Dirty_Clean;
 
 /**
  * The result is equal 0 for all starts' cause counter has primitive type

@@ -1,7 +1,7 @@
-package com.zaleslaw.concurrency.puzzlers.Puzzle_2;
+package com.zaleslaw.concurrency.puzzlers.Puzzle_2_Dirty_Clean;
 
 /**
- * The final value of counter will be different from start to start
+ * Synchronized sections #1 and #2 install lock on counter changes
  */
 public class CleanReadingWritingObjectValueWithSynchronizedSection {
 
@@ -15,7 +15,7 @@ public class CleanReadingWritingObjectValueWithSynchronizedSection {
             @Override
             public void run() {
                 for (int i = 0; i < 1_000_000; i++){
-                    synchronized (b){
+                    synchronized (b) {   // #1
                         b.counter++;
                     }
                 }
@@ -26,7 +26,7 @@ public class CleanReadingWritingObjectValueWithSynchronizedSection {
             @Override
             public void run() {
                 for (int i = 0; i < 1_000_000; i++){
-                    synchronized (b){
+                    synchronized (b) {   // #2
                         b.counter--;
                     }
                 }

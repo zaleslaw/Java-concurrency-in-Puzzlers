@@ -1,4 +1,4 @@
-package com.zaleslaw.concurrency.puzzlers.Puzzle_2;
+package com.zaleslaw.concurrency.puzzlers.Puzzle_2_Dirty_Clean;
 
 /**
  * The final value of counter will be different from start to start
