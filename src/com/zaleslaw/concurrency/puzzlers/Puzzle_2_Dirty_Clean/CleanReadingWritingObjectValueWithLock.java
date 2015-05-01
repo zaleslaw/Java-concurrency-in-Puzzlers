@@ -11,7 +11,7 @@ public class CleanReadingWritingObjectValueWithLock {
     public Integer counter = 0;
     public Lock lock = new ReentrantLock();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         CleanReadingWritingObjectValueWithLock b = new CleanReadingWritingObjectValueWithLock();
 
@@ -40,7 +40,8 @@ public class CleanReadingWritingObjectValueWithLock {
 
         t1.start();
         t2.start();
-
+        t1.join();
+        t2.join();
         System.out.println("Counter = " + b.counter);
 
     }

@@ -7,7 +7,7 @@ public class DirtyReadingWritingPrimitiveType {
 
     public int counter = 0;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         DirtyReadingWritingPrimitiveType b = new DirtyReadingWritingPrimitiveType();
 
@@ -29,7 +29,8 @@ public class DirtyReadingWritingPrimitiveType {
 
         t1.start();
         t2.start();
-
+        t1.join();
+        t2.join();
         System.out.println("Counter = " + b.counter);
 
     }

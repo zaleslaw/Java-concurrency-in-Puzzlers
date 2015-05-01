@@ -7,7 +7,7 @@ public class DirtyReadingWritingObjectValue {
 
     public Integer counter = 0;
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
 
         DirtyReadingWritingObjectValue b = new DirtyReadingWritingObjectValue();
 
@@ -29,7 +29,8 @@ public class DirtyReadingWritingObjectValue {
 
         t1.start();
         t2.start();
-
+        t1.join();
+        t2.join();
         System.out.println("Counter = " + b.counter);
 
     }
