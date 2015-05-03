@@ -1,18 +1,18 @@
-package com.zaleslaw.concurrency.puzzlers.Puzzle_6_Collections;
+package com.zaleslaw.concurrency.puzzlers.Puzzle_6_Collections.linkedlist;
 
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * It represents LinkedList object destroyed by writing from many threads
+ * The synchronized LinkedList has no destroyed state
  */
-public class DestroyedLinkedListAndManyThreads {
+public class SynchronizedLinkedListAndManyThreads {
 
     public static void main(String[] args) throws InterruptedException {
-        List<Integer> resource = new LinkedList<>();
+
+        long start = System.nanoTime();
+
+        List<Integer> resource = Collections.synchronizedList(new LinkedList<Integer>());
         List<Thread> threads = new ArrayList<>();
 
 
@@ -42,12 +42,14 @@ public class DestroyedLinkedListAndManyThreads {
             System.out.println("Thread # " + t.getName() + " finished");
         }
 
-        System.out.println("Size is " + resource.size());
-
         Iterator<Integer> iter = resource.iterator();
         while (iter.hasNext()) {
             System.out.println(iter.next());
         }
+
+
+        System.out.println("Size is " + resource.size());
+        System.out.println("Result time is " + (System.nanoTime() - start));
 
     }
 }

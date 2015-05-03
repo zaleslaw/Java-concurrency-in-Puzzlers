@@ -1,15 +1,18 @@
-package com.zaleslaw.concurrency.puzzlers.Puzzle_6_Collections;
+package com.zaleslaw.concurrency.puzzlers.Puzzle_6_Collections.linkedlist;
 
-import java.util.*;
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.LinkedList;
+import java.util.List;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * The synchronized LinkedList has no destroyed state
+ * It represents LinkedList object destroyed by writing from many threads
  */
-public class SynchronizedLinkedListAndManyThreads {
+public class DestroyedLinkedListAndManyThreads {
 
     public static void main(String[] args) throws InterruptedException {
-        List<Integer> resource = Collections.synchronizedList(new LinkedList<Integer>());
+        List<Integer> resource = new LinkedList<>();
         List<Thread> threads = new ArrayList<>();
 
 
