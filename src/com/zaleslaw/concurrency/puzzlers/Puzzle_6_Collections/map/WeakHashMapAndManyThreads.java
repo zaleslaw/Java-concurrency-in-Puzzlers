@@ -5,7 +5,7 @@ import java.util.concurrent.ConcurrentHashMap;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**
- * It represents HashMap object destroyed by writing from many threads
+ * It represents WeakHashMap which clear itself when GC works
  */
 public class WeakHashMapAndManyThreads {
 
