@@ -1,7 +1,9 @@
-package com.zaleslaw.concurrency.puzzlers.Puzzle_6_Collections.map;
+package com.zaleslaw.concurrency.puzzlers.Puzzle_6_Collections.map.references;
 
-import java.util.*;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.WeakHashMap;
 import java.util.concurrent.ThreadLocalRandom;
 
 /**

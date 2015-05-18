@@ -1,9 +1,8 @@
-package com.zaleslaw.concurrency.puzzlers.Puzzler_8_Synchronizers;
+package com.zaleslaw.concurrency.puzzlers.Puzzle_8_Synchronizers;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
-import java.util.concurrent.ThreadPoolExecutor;
 
 /**
  * CountLatch is used like signal that array was handled by many threads

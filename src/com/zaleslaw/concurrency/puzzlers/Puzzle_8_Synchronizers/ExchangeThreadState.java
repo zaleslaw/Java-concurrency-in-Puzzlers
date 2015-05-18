@@ -1,4 +1,4 @@
-package com.zaleslaw.concurrency.puzzlers.Puzzler_8_Synchronizers;
+package com.zaleslaw.concurrency.puzzlers.Puzzle_8_Synchronizers;
 
 
 import java.util.LinkedList;
